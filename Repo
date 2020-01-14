@@ -1,0 +1,16 @@
+public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Webdriver\\chromedriver-v77\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+//		System.setProperty("webdriver.gecko.driver", "C:\\Geckodriver\\firefoxdriver-v21\\geckodriver.exe");
+//		WebDriver driver = new FirefoxDriver();
+		
+		driver.get("https://google.pl");
+		driver.findElement(By.name("q")).sendKeys("Hello webdriver |!|");
+		driver.findElement(By.id("gsr")).click();
+		
+		Thread.sleep(10000);
+		
+//		driver.close();
+		driver.quit();
+
+	}
